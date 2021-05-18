@@ -1,7 +1,24 @@
+
+import java.util.Scanner;
+
 public class SmallestPositiveNumberChallenge {
 
     public static void main(String[] args) {
-        int [] array = {-1,-3};
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Enter the number of elements you want initialize in the array");
+        int number = scan.nextInt();
+
+        int[] array = new int[number];
+
+        System.out.println("\n\n***Initializing Array***");
+        System.out.println("Enter "+ array.length +" integer values");
+
+        for(int i=0; i < array.length; i++) {
+            array[i] = scan.nextInt();
+        }
+        System.out.println("***Initialization completed***\n");
+
         int smallestPositiveNumber = smallestPositiveNumber(array);
         System.out.println(smallestPositiveNumber);
     }
